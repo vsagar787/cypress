@@ -6,6 +6,25 @@ Assumptions:
 4. Automatically reloads Test Runner once the changes have been made to the test.
 
 
+Options:
+
+1. Time Travel: 
+	It can take snapshots of the application when the tests are running. Then as a test developer, we can hover over each command in the Test Runner panel to see what happened at each step.
+2. Debuggability: 
+	It enables debugging of the tests directly from the familiar tools like Developer Tools. The readable errors and stack traces make debugging lightning fast.
+3. Automatic Waiting: 
+	With Cypress, there is no need to put explicit waits or sleeps to your tests. It automatically waits for commands and assertions before proceeding.
+4. Spies, Stubs, and Clocks: 
+	Similar to unit test cases, you can verify and control the behavior of functions, server responses, or timers at run time using the spies and stubs provided by Cypress.
+5. Network Traffic Control:  
+	Using Cypress, you can stub network traffic as you like and customize the response of your API calls as per your need.
+6. Consistent Results: 
+	As Cypress doesn't use Selenium or WebDriver and executes tests directly in the browser, it aids for fast, consistent, and reliable tests that are flake-free.
+7. Screenshots and Videos:
+	It takes screenshots automatically on failure, or record videos of your entire test suite when running from the CLI.*
+
+
+
 Conclusion:
 
 Cypress is a powerful testing framework that can help improve the quality of web applications by automating tests and making it easier to catch and fix issues before they reach production.
