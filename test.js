@@ -21,7 +21,20 @@ Options:
 6. Consistent Results: 
 	As Cypress doesn't use Selenium or WebDriver and executes tests directly in the browser, it aids for fast, consistent, and reliable tests that are flake-free.
 7. Screenshots and Videos:
-	It takes screenshots automatically on failure, or record videos of your entire test suite when running from the CLI.*
+	It takes screenshots automatically on failure, or record videos of your entire test suite when running from the CLI.
+	
+	
+Installing:
+
+1. Install Cypress via npm:
+	1.1. cd /your/project/path
+	1.2. npm install cypress --save-dev
+
+2. Installing Cypress via yarn:
+	2.1. cd /your/project/path
+	2.2. yarn add cypress --dev
+3. Direct download
+	3.1. you can always download Cypress directly from our CDN.
 
 
 
