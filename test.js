@@ -80,3 +80,6 @@ https://stackoverflow.com/questions/58622912/angular-testing-how-to-provide-inje
 
 
 https://stackoverflow.com/questions/54355903/angular-7-testing-with-inheritance-and-global-injector
+
+
+https://stackoverflow.com/questions/53789741/angular-app-initialization-with-karma-jasmine
