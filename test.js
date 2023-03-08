@@ -65,3 +65,5 @@ https://stackoverflow.com/questions/54548642/how-to-write-unit-test-cases-for-ap
 https://ngworker.github.io/ngworker/docs/application-testing/
 
 
+https://stackoverflow.com/questions/63640433/how-to-test-topromise-in-angular-9
+
