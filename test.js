@@ -67,3 +67,11 @@ https://ngworker.github.io/ngworker/docs/application-testing/
 
 https://stackoverflow.com/questions/63640433/how-to-test-topromise-in-angular-9
 
+
+https://www.prestonlamb.com/blog/unit-testing-in-angular
+
+
+
+
+
+
