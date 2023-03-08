@@ -56,6 +56,9 @@ Cypress is a powerful testing framework that can help improve the quality of web
 2. Additionally, it provides the inbuilt test runner, using which a user can run the test cases directly from Cypress UI.
 3. It provides a Dashboard service, which displays the results of all test runs.
 4. It provides various unique features like Time Travel, Automatic wait, Stubs, etc. which makes it unique among the various other UI automation tools.
+======================================================================================================
+	
 
+https://stackoverflow.com/questions/54548642/how-to-write-unit-test-cases-for-app-initializer-using-karma-jasmine-in-angular
 
 
