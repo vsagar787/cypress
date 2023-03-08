@@ -77,3 +77,6 @@ https://plnkr.co/edit/pH0TKTjhGqPuqmDa7wrt?p=preview&preview
 
 
 https://stackoverflow.com/questions/58622912/angular-testing-how-to-provide-injector
+
+
+https://stackoverflow.com/questions/54355903/angular-7-testing-with-inheritance-and-global-injector
