@@ -62,3 +62,6 @@ Cypress is a powerful testing framework that can help improve the quality of web
 https://stackoverflow.com/questions/54548642/how-to-write-unit-test-cases-for-app-initializer-using-karma-jasmine-in-angular
 
 
+https://ngworker.github.io/ngworker/docs/application-testing/
+
+
