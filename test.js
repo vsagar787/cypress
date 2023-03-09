@@ -109,4 +109,12 @@ test('test with spy subscription', () => {
   expect(callback).toHaveBeenCalledWith('value 2');
   subscription.mockRestore();
 });
+------------------
+it ( 'should call doAThing when value is returned', () => {
+        const doAThingSpy = jest.spyOn( fixture, 'doAThing' );
+        myServiceMock.returnMyObservable.mockReturnValue( of( true ) );
 
+        fixture.testFunction();
+
+        expect( doAThingSpy ).toHaveBeenCalledWith( true );
+    });
