@@ -10,6 +10,14 @@ jest.spyOn(service, 'subscribe');
 service.completeAuthenticationProcess('').subscribe(async (response) => {
             console.log('phani 88888 = ', response);
         });
+        
+        
+        service.completeAuthenticationProcess('').subscribe((response) => {
+      console.log('phani 123456', response);
+      expect(response).toBe(mockSuccessResponse);
+    }, (err) => {
+      expect(err).toBeTruthy();
+    });
 
 ============================
 const mockObservable = jest.fn(() => ({
