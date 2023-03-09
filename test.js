@@ -131,3 +131,18 @@ describe( 'MyComponent', () => {
         expect( doAThingSpy ).toHaveBeenCalledWith( true );
     });
 });
+
+-------------------------------------
+const myService = new MyService();
+const subscriptionSpy = jest.spyOn(myService, 'subscribe');
+
+myService.doSomethingThatShouldTriggerSubscription();
+expect(subscriptionSpy).toHaveBeenCalledWith(/* expected arguments */);
+
+const messageData = { /* some data */ };
+myService.simulateMessage(messageData);
+
+expect(subscriptionSpy.mock.calls[0][0]).toHaveBeenCalledWith(messageData);
+afterEach(() => {
+  subscriptionSpy.mockRestore();
+});
