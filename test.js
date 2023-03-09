@@ -110,7 +110,19 @@ test('test with spy subscription', () => {
   subscription.mockRestore();
 });
 ------------------
-it ( 'should call doAThing when value is returned', () => {
+describe( 'MyComponent', () => {
+    let fixture;
+    let myServiceMock;
+
+    beforeEach( () => {
+        myServiceMock = {
+            returnMyObservable: jest.fn()
+        }
+
+        fixture = new MyComponent( myServiceMock );
+    });
+
+    it ( 'should call doAThing when value is returned', () => {
         const doAThingSpy = jest.spyOn( fixture, 'doAThing' );
         myServiceMock.returnMyObservable.mockReturnValue( of( true ) );
 
@@ -118,3 +130,4 @@ it ( 'should call doAThing when value is returned', () => {
 
         expect( doAThingSpy ).toHaveBeenCalledWith( true );
     });
+});
