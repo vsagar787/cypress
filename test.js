@@ -146,3 +146,16 @@ expect(subscriptionSpy.mock.calls[0][0]).toHaveBeenCalledWith(messageData);
 afterEach(() => {
   subscriptionSpy.mockRestore();
 });
+-----------------------------------------------
+	 it('should call getBookedEnv service ', function () {
+    const service = TestBed.get(EnvironmentBookingService); // get your service
+    spyOn(service, 'getBookedEnv').and.callFake(() => {
+      return of([]); // or return a list of bookings in case you want to test the first part of the if statement 
+    });
+    component.LoadListData('EnvironmentList');
+    expect(service.getBookedEnv).toHaveBeenCalledWith();
+
+    // additional tests that verify the inside of the subscribe (change below in case the mocked service returned something)
+    expect(component.itemListEnvName).equalTo([]);
+    expect(component.generateCheckDisable).equalTo(false);
+  });
