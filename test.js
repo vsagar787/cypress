@@ -202,3 +202,6 @@ describe('MyComponent', () => {
     expect(fixture.doAThing).toHaveBeenCalled();
   });
 });
+
+
+https://www.youtube.com/watch?v=FJvk9YyXTLo
