@@ -83,3 +83,30 @@ https://stackoverflow.com/questions/54355903/angular-7-testing-with-inheritance-
 
 
 https://stackoverflow.com/questions/53789741/angular-app-initialization-with-karma-jasmine
+
+============================
+const mockObservable = jest.fn(() => ({
+  subscribe: jest.fn(callback => callback('mock value'))
+}));
+
+test('test with mock subscription', () => {
+  const callback = jest.fn();
+  const subscription = mockObservable().subscribe(callback);
+  expect(callback).toHaveBeenCalledWith('mock value');
+  subscription.unsubscribe();
+});
+--------------------------
+const observable = new Observable(observer => {
+  observer.next('value 1');
+  observer.next('value 2');
+});
+test('test with spy subscription', () => {
+  const callback = jest.fn();
+  const subscription = jest.spyOn(observable, 'subscribe');
+  observable.subscribe(callback);
+  expect(subscription).toHaveBeenCalled();
+  expect(callback).toHaveBeenCalledWith('value 1');
+  expect(callback).toHaveBeenCalledWith('value 2');
+  subscription.mockRestore();
+});
+
