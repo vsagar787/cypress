@@ -159,3 +159,46 @@ afterEach(() => {
     expect(component.itemListEnvName).equalTo([]);
     expect(component.generateCheckDisable).equalTo(false);
   });
+================================
+index.ts:
+
+export class MyComponent {
+  private myService;
+  constructor(myService) {
+    this.myService = myService;
+  }
+  public testFunction(): void {
+    this.myService.returnMyObservable.subscribe(value => this.doAThing(value));
+  }
+  public doAThing(value) {}
+}
+
+index.spec.ts:
+
+import { MyComponent } from './';
+
+describe('MyComponent', () => {
+  let fixture;
+  let myServiceMock;
+
+  beforeEach(() => {
+    myServiceMock = {
+      returnMyObservable: {
+        subscribe: jest.fn()
+      }
+    };
+    fixture = new MyComponent(myServiceMock);
+  });
+
+  it('should call do a thing when value is returned', () => {
+    let observer;
+    myServiceMock.returnMyObservable.subscribe.mockImplementation(handler => {
+      observer = handler;
+    });
+    jest.spyOn(fixture, 'doAThing');
+    fixture.testFunction();
+    observer();
+
+    expect(fixture.doAThing).toHaveBeenCalled();
+  });
+});
